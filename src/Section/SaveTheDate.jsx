@@ -389,17 +389,17 @@ function SaveTheDate() {
 
       "BEGIN:VEVENT",
 
-      "UID:hariharan-kaviya-wedding-2026@example.com",
+      "UID:iamvimal.2002@gmail.com",
 
-      "DTSTAMP:20260921T000000Z",
+      "DTSTAMP:20261025T000000Z",
 
       "DTSTART;TZID=Asia/Kolkata:20261025T060000",
 
       "DTEND;TZID=Asia/Kolkata:20261025T080000",
 
-      "SUMMARY:Arunn & varsha Wedding",
+      "SUMMARY:Arunn & Varsha Wedding",
 
-      "DESCRIPTION:Wedding Muhurtham of Hariharan and Kaviya.",
+      "DESCRIPTION:Wedding Muhurtham of Arunn & Varsha.",
 
       "LOCATION:BALANJIKA MAHAL, PERUMAL KOVIL, KUNNATHURPUDUR",
 
