@@ -18,38 +18,47 @@ function App() {
       {!isOpened ? (
         <Opening onOpen={() => setIsOpened(true)} />
       ) : (
-        <main className="h-[100dvh] w-full snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
+        <main
+          className="
+            h-[100dvh]
+            w-full
+            overflow-y-auto
+            overflow-x-hidden
 
-          {/* HERO */}
+            snap-y
+            snap-mandatory
+
+            overscroll-y-none
+
+            scroll-smooth
+
+            [scrollbar-width:none]
+            [-ms-overflow-style:none]
+          "
+        >
           <FitSection>
             <Hero />
           </FitSection>
 
-          {/* SAVE THE DATE */}
           <FitSection>
             <SaveTheDate />
           </FitSection>
 
-          {/* COUNTDOWN */}
           <FitSection>
             <Countdown />
           </FitSection>
 
-          {/* EVENTS */}
           <FitSection>
             <Events />
           </FitSection>
 
-          {/* QUOTES */}
           <FitSection>
             <Quotes />
           </FitSection>
 
-          {/* THANK YOU */}
           <FitSection>
             <ThankYou />
           </FitSection>
-
         </main>
       )}
     </>
