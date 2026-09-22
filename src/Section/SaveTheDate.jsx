@@ -3,11 +3,13 @@ import { motion } from "motion/react";
 
 import saveTheDateBg from "../assets/Save-The-Date-bg.jpg";
 
+let isCardScratched = false;
+
 function SaveTheDate() {
   const canvasRef = useRef(null);
 
   const [isScratching, setIsScratching] = useState(false);
-  const [revealed, setRevealed] = useState(false);
+  const [revealed, setRevealed] = useState(() => isCardScratched);
   const [showHeartBurst, setShowHeartBurst] = useState(false);
 
   // ==========================================
@@ -40,6 +42,15 @@ function SaveTheDate() {
     });
 
     const resizeCanvas = () => {
+      if (isCardScratched || revealed) {
+        const canvas = canvasRef.current;
+        if (canvas) {
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        return;
+      }
+
       const rect = canvas.getBoundingClientRect();
 
       const dpr = window.devicePixelRatio || 1;
@@ -255,7 +266,7 @@ function SaveTheDate() {
 
     const scratchedPercentage = (transparentPixels / totalPixels) * 100;
 
-    if (scratchedPercentage >= 25) {
+    if (scratchedPercentage >= 15) {
       revealCard();
     }
   };
@@ -273,6 +284,7 @@ function SaveTheDate() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    isCardScratched = true;
     setRevealed(true);
     setIsScratching(false);
     setShowHeartBurst(true);
@@ -529,7 +541,9 @@ function SaveTheDate() {
           <canvas
             ref={canvasRef}
             data-lenis-prevent
-            className="absolute inset-0 h-full w-full touch-none"
+            className={`absolute inset-0 h-full w-full touch-none transition-opacity duration-700 ${
+              revealed ? "pointer-events-none opacity-0" : "opacity-100"
+            }`}
             onMouseDown={(e) => {
               setIsScratching(true);
               scratch(e);
