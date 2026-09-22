@@ -18,7 +18,7 @@ function App() {
       ) : (
         <main className="h-screen snap-y snap-mandatory overflow-y-auto">
           {/* Hero */}
-          <section className="min-h-screen snap-start">
+          <section className="h-screen snap-start">
             <Hero />
           </section>
 
