@@ -23,13 +23,14 @@ function App() {
     const lenis = new Lenis({
       wrapper: mainRef.current,
       content: contentRef.current,
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.075,
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1,
+      syncTouch: true,
+      syncTouchLerp: 0.075,
       infinite: false,
     });
 
