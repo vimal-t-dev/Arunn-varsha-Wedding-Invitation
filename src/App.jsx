@@ -24,14 +24,7 @@ function App() {
             w-full
             overflow-y-auto
             overflow-x-hidden
-
-            snap-y
-            snap-mandatory
-
             overscroll-y-none
-
-            scroll-smooth
-
             [scrollbar-width:none]
             [-ms-overflow-style:none]
           "
