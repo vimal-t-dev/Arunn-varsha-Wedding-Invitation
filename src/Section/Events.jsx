@@ -7,7 +7,7 @@ import marriageImage from "../assets/Marraige image.jpg";
 function Events() {
   return (
     <section
-      className="relative max-h-screen overflow-hidden bg-cover bg-center px-4 py-20"
+      className="relative h-[100dvh] w-full overflow-hidden bg-cover bg-center px-4 py-20"
       style={{
         backgroundImage: `url(${eventsBg})`,
       }}
