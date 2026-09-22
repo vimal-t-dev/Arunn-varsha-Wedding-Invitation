@@ -13,37 +13,123 @@ function App() {
 
   return (
     <>
+      {/* =========================
+          OPENING INVITATION
+      ========================== */}
       {!isOpened ? (
         <Opening onOpen={() => setIsOpened(true)} />
       ) : (
-        <main className="h-screen snap-y snap-mandatory overflow-y-auto">
-          {/* Hero */}
-          <section className="h-screen snap-start">
+        /* =========================
+           MAIN INVITATION CONTAINER
+
+           100svh = mobile safe viewport height
+           snap-y = vertical snap scrolling
+           snap-mandatory = force snapping
+        ========================== */
+        <main
+          className="
+            h-[100svh]
+            w-full
+            snap-y
+            snap-mandatory
+            overflow-y-auto
+            overflow-x-hidden
+            scroll-smooth
+          "
+        >
+          {/* =========================
+              HERO
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <Hero />
           </section>
 
-          {/* Save The Date */}
-          <section className="min-h-screen snap-start">
+          {/* =========================
+              SAVE THE DATE
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <SaveTheDate />
           </section>
 
-          {/* Countdown */}
-          <section className="min-h-screen snap-start">
+          {/* =========================
+              COUNTDOWN
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <Countdown />
           </section>
 
-          {/* Events */}
-          <section className="min-h-screen snap-start">
+          {/* =========================
+              EVENTS
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <Events />
           </section>
 
-          {/* Quotes */}
-          <section className="min-h-screen snap-start">
+          {/* =========================
+              QUOTES
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <Quotes />
           </section>
 
-          {/* Thank You */}
-          <section className="min-h-screen snap-start">
+          {/* =========================
+              THANK YOU
+          ========================== */}
+          <section
+            className="
+              h-[100svh]
+              min-h-0
+              w-full
+              snap-start
+              snap-always
+              overflow-hidden
+            "
+          >
             <ThankYou />
           </section>
         </main>
