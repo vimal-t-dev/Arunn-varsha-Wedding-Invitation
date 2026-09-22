@@ -528,6 +528,7 @@ function SaveTheDate() {
 
           <canvas
             ref={canvasRef}
+            data-lenis-prevent
             className="absolute inset-0 h-full w-full touch-none"
             onMouseDown={(e) => {
               setIsScratching(true);
