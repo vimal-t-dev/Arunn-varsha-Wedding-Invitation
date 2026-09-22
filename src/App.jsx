@@ -16,13 +16,36 @@ function App() {
       {!isOpened ? (
         <Opening onOpen={() => setIsOpened(true)} />
       ) : (
-        <main>
-          <Hero />
-          <SaveTheDate />
-          <Countdown />
-          <Events />
-          <Quotes />
-          <ThankYou />
+        <main className="h-screen snap-y snap-mandatory overflow-y-auto">
+          {/* Hero */}
+          <section className="min-h-screen snap-start">
+            <Hero />
+          </section>
+
+          {/* Save The Date */}
+          <section className="min-h-screen snap-start">
+            <SaveTheDate />
+          </section>
+
+          {/* Countdown */}
+          <section className="min-h-screen snap-start">
+            <Countdown />
+          </section>
+
+          {/* Events */}
+          <section className="min-h-screen snap-start">
+            <Events />
+          </section>
+
+          {/* Quotes */}
+          <section className="min-h-screen snap-start">
+            <Quotes />
+          </section>
+
+          {/* Thank You */}
+          <section className="min-h-screen snap-start">
+            <ThankYou />
+          </section>
         </main>
       )}
     </>
