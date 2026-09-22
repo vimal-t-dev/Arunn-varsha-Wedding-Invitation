@@ -24,6 +24,8 @@ function FitSection({ children, className = "" }) {
       const widthScale = availableWidth / contentWidth;
       const heightScale = availableHeight / contentHeight;
 
+      // Fit content inside the screen.
+      // Never enlarge content above its original size.
       const newScale = Math.min(widthScale, heightScale, 1);
 
       setScale(newScale);
@@ -48,6 +50,7 @@ function FitSection({ children, className = "" }) {
 
     return () => {
       resizeObserver.disconnect();
+
       window.removeEventListener("resize", calculateScale);
       window.removeEventListener("orientationchange", calculateScale);
     };
@@ -63,6 +66,7 @@ function FitSection({ children, className = "" }) {
         className="absolute left-1/2 top-0"
         style={{
           width: `calc(100% / ${scale})`,
+          minHeight: "100%",
           transform: `translateX(-50%) scale(${scale})`,
           transformOrigin: "top center",
         }}

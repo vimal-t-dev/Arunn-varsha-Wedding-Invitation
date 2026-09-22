@@ -46,7 +46,7 @@ function Countdown() {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-cover bg-center px-5 py-20"
+      className="relative h-[100dvh] w-full overflow-hidden bg-cover bg-center px-5 py-20"
       style={{
         backgroundImage: `url(${countdownBg})`,
       }}
