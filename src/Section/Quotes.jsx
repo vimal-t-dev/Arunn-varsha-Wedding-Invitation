@@ -94,7 +94,7 @@ function Quotes() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="mt-1 font-serif text-xl italic text-amber-500"
           >
-            Arunn <span className="mx-1 text-black">♥</span> Varsha
+            Arunn <span className="mx-1 text-red-800">♥</span> Varsha
           </motion.p>
         </motion.div>
       </div>
@@ -103,3 +103,5 @@ function Quotes() {
 }
 
 export default Quotes;
+
+
