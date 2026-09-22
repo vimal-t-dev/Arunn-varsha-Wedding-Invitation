@@ -18,17 +18,8 @@ function App() {
       {!isOpened ? (
         <Opening onOpen={() => setIsOpened(true)} />
       ) : (
-        <main
-          className="
-            h-[100dvh]
-            w-full
-            overflow-y-auto
-            overflow-x-hidden
-            overscroll-y-none
-            [scrollbar-width:none]
-            [-ms-overflow-style:none]
-          "
-        >
+        <main className="h-[100dvh] w-full overflow-y-auto overflow-x-hidden overscroll-y-none">
+          
           <FitSection>
             <Hero />
           </FitSection>
@@ -52,6 +43,7 @@ function App() {
           <FitSection>
             <ThankYou />
           </FitSection>
+
         </main>
       )}
     </>

@@ -4,9 +4,9 @@ function FitSection({ children, className = "" }) {
       className={`
         relative
         h-[100dvh]
+        min-h-[100dvh]
         w-full
         shrink-0
-        overflow-hidden
         ${className}
       `}
     >
