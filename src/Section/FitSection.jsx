@@ -6,7 +6,6 @@ function FitSection({ children, className = "" }) {
         h-[100dvh]
         min-h-[100dvh]
         w-full
-        shrink-0
         ${className}
       `}
     >
