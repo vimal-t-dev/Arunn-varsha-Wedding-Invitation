@@ -8,130 +8,48 @@ import Events from "./Section/Events";
 import Quotes from "./Section/Quotes";
 import ThankYou from "./Section/ThankYou";
 
+import FitSection from "./Section/FitSection";
+
 function App() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
     <>
-      {/* =========================
-          OPENING INVITATION
-      ========================== */}
       {!isOpened ? (
         <Opening onOpen={() => setIsOpened(true)} />
       ) : (
-        /* =========================
-           MAIN INVITATION CONTAINER
+        <main className="h-[100dvh] w-full snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
 
-           100svh = mobile safe viewport height
-           snap-y = vertical snap scrolling
-           snap-mandatory = force snapping
-        ========================== */
-        <main
-          className="
-            h-[100svh]
-            w-full
-            snap-y
-            snap-mandatory
-            overflow-y-auto
-            overflow-x-hidden
-            scroll-smooth
-          "
-        >
-          {/* =========================
-              HERO
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* HERO */}
+          <FitSection>
             <Hero />
-          </section>
+          </FitSection>
 
-          {/* =========================
-              SAVE THE DATE
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* SAVE THE DATE */}
+          <FitSection>
             <SaveTheDate />
-          </section>
+          </FitSection>
 
-          {/* =========================
-              COUNTDOWN
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* COUNTDOWN */}
+          <FitSection>
             <Countdown />
-          </section>
+          </FitSection>
 
-          {/* =========================
-              EVENTS
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* EVENTS */}
+          <FitSection>
             <Events />
-          </section>
+          </FitSection>
 
-          {/* =========================
-              QUOTES
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* QUOTES */}
+          <FitSection>
             <Quotes />
-          </section>
+          </FitSection>
 
-          {/* =========================
-              THANK YOU
-          ========================== */}
-          <section
-            className="
-              h-[100svh]
-              min-h-0
-              w-full
-              snap-start
-              snap-always
-              overflow-hidden
-            "
-          >
+          {/* THANK YOU */}
+          <FitSection>
             <ThankYou />
-          </section>
+          </FitSection>
+
         </main>
       )}
     </>
